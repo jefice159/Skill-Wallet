@@ -1,0 +1,683 @@
+/* ==========================================
+   CSS BASICS LAB - Complete Styling
+   ========================================== */
+
+/* ==========================================
+   1. GLOBAL STYLES & RESET
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* ==========================================
+   2. HEADER SECTION
+   ========================================== */
+
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* ==========================================
+   3. NAVIGATION BAR
+   ========================================== */
+
+.navbar {
+    background-color: #333;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-list li {
+    padding: 0;
+}
+
+.nav-list a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-list a:hover {
+    background-color: #667eea;
+}
+
+/* ==========================================
+   4. MAIN CONTENT WRAPPER
+   ========================================== */
+
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ==========================================
+   5. SECTION STYLES
+   ========================================== */
+
+.section {
+    background: white;
+    margin-bottom: 40px;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section h2 {
+    color: #667eea;
+    font-size: 2em;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.section-description {
+    color: #666;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* ==========================================
+   6. BOX MODEL DEMONSTRATION
+   ========================================== */
+
+.box-model-demo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+/* Box Model Concept:
+   Content -> Padding (inside) -> Border -> Margin (outside)
+*/
+
+.box {
+    /* WIDTH AND HEIGHT */
+    width: 250px;
+    height: 150px;
+    
+    /* PADDING: Space between content and border (INSIDE) */
+    padding: 20px;
+    
+    /* BORDER: Line around the box */
+    border: 3px solid #667eea;
+    
+    /* MARGIN: Space outside the border (OUTSIDE) */
+    margin: 15px;
+    
+    /* DISPLAY AND ALIGNMENT */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    /* BACKGROUND */
+    background-color: #f0f4ff;
+    
+    /* TRANSITION FOR INTERACTIVITY */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Different box styles */
+.box-1 {
+    background-color: #e8f0ff;
+    border-color: #667eea;
+    margin: 20px;
+    padding: 25px;
+}
+
+.box-2 {
+    background-color: #fff0e8;
+    border: 2px dashed #f5576c;
+    border-radius: 0;
+    padding: 15px;
+}
+
+.box-3 {
+    background-color: #e8fff0;
+    border: 4px solid #00f2fe;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* ==========================================
+   7. FLEXBOX LAYOUTS
+   ========================================== */
+
+.flex-demo {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.flex-demo h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+/* FLEX CONTAINER - The parent that holds flex items */
+.flex-container {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    min-height: 120px;
+    gap: 10px;
+}
+
+/* FLEX ITEMS - Children of flex container */
+.flex-item {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.flex-item:hover {
+    transform: scale(1.05);
+}
+
+/* HORIZONTAL LAYOUT */
+.flex-container.horizontal {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* VERTICAL LAYOUT */
+.flex-container.vertical {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.flex-container.vertical .flex-item {
+    flex: 0 1 auto;
+    padding: 15px;
+}
+
+/* CENTERED CONTENT */
+.flex-container.centered {
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.flex-container.centered .flex-item {
+    flex: 0 1 300px;
+    font-size: 1.2em;
+    padding: 40px;
+}
+
+/* ==========================================
+   8. FORM STYLING
+   ========================================== */
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+.styled-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* FORM GROUP - Container for label and input */
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.styled-form label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 1em;
+}
+
+/* INPUT FIELDS - Text inputs, email inputs */
+.styled-form input[type="text"],
+.styled-form input[type="email"],
+.styled-form select,
+.styled-form textarea {
+    /* PADDING: Space inside the input */
+    padding: 12px 15px;
+    
+    /* BORDER: Input field border */
+    border: 2px solid #ddd;
+    
+    /* BORDER-RADIUS: Rounded corners */
+    border-radius: 5px;
+    
+    /* FONT */
+    font-size: 1em;
+    font-family: inherit;
+    
+    /* TRANSITION: Smooth color change on focus */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* INPUT FOCUS STATE */
+.styled-form input[type="text"]:focus,
+.styled-form input[type="email"]:focus,
+.styled-form select:focus,
+.styled-form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* PLACEHOLDER TEXT */
+.styled-form input::placeholder,
+.styled-form textarea::placeholder {
+    color: #999;
+}
+
+/* CHECKBOX STYLING */
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* BUTTONS */
+.btn {
+    /* PADDING: Space inside button */
+    padding: 12px 30px;
+    
+    /* BORDER: Button border */
+    border: none;
+    
+    /* BORDER-RADIUS: Rounded corners */
+    border-radius: 5px;
+    
+    /* FONT */
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    
+    /* TRANSITION: Smooth effects on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    /* MARGIN: Space around buttons */
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+    background-color: #667eea;
+}
+
+.btn-primary:hover {
+    background-color: #764ba2;
+}
+
+/* SECONDARY BUTTON */
+.btn-secondary {
+    background-color: #f5576c;
+}
+
+.btn-secondary:hover {
+    background-color: #d63447;
+}
+
+/* ==========================================
+   9. PAGE LAYOUT SECTIONS
+   ========================================== */
+
+.layout-demo {
+    background-color: #f9f9f9;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
+}
+
+/* DEMO HEADER */
+.demo-header {
+    background-color: #667eea;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    flex-basis: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.demo-header h3 {
+    margin-bottom: 5px;
+    font-size: 1.3em;
+}
+
+/* DEMO MAIN CONTENT AREA */
+.demo-main {
+    display: flex;
+    flex: 1;
+}
+
+/* DEMO SIDEBAR */
+.demo-sidebar {
+    background-color: #f0f4ff;
+    padding: 30px;
+    width: 250px;
+    border-right: 2px solid #e0e0e0;
+    overflow-y: auto;
+}
+
+.demo-sidebar h4 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.demo-sidebar p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* DEMO CONTENT */
+.demo-content {
+    flex: 1;
+    padding: 30px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+.demo-content h4 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.demo-content p {
+    color: #666;
+    line-height: 1.8;
+}
+
+/* DEMO FOOTER */
+.demo-footer {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    flex-basis: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.demo-footer h3 {
+    margin-bottom: 5px;
+}
+
+/* ==========================================
+   10. EXPLANATION BOXES
+   ========================================== */
+
+.explanation {
+    background-color: #f0f4ff;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    margin-top: 30px;
+}
+
+.explanation h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.explanation-list {
+    list-style: none;
+    padding: 0;
+}
+
+.explanation-list li {
+    padding: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    line-height: 1.8;
+}
+
+.explanation-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+.explanation-list strong {
+    color: #667eea;
+}
+
+/* ==========================================
+   11. FOOTER SECTION
+   ========================================== */
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* ==========================================
+   12. RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .nav-list {
+        flex-direction: column;
+    }
+
+    .nav-list li {
+        width: 100%;
+    }
+
+    .nav-list a {
+        border-bottom: 1px solid #555;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .box-model-demo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .flex-container {
+        flex-wrap: wrap;
+    }
+
+    .demo-main {
+        flex-direction: column;
+    }
+
+    .demo-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #e0e0e0;
+    }
+
+    .styled-form {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 30px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .main-content {
+        padding: 20px 10px;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+
+    .flex-item {
+        min-width: 60px;
+        padding: 10px;
+    }
+}

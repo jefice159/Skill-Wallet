@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics - Styling and Layout Lab</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HEADER SECTION -->
+    <header class="header">
+        <div class="header-content">
+            <h1>CSS Basics Lab</h1>
+            <p class="subtitle">Learning Styling and Layout with CSS</p>
+        </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="#box-model">Box Model</a></li>
+            <li><a href="#flexbox">Flexbox</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#sections">Sections</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        
+        <!-- BOX MODEL SECTION -->
+        <section id="box-model" class="section">
+            <h2>CSS Box Model</h2>
+            <p class="section-description">The box model defines spacing and sizing of elements with margin, padding, border, width, and height.</p>
+            
+            <div class="box-model-demo">
+                <div class="box box-1">
+                    <p>Box 1: With Margin & Padding</p>
+                </div>
+                <div class="box box-2">
+                    <p>Box 2: Different Border Style</p>
+                </div>
+                <div class="box box-3">
+                    <p>Box 3: Rounded Corners</p>
+                </div>
+            </div>
+
+            <div class="explanation">
+                <h3>Box Model Explained:</h3>
+                <ul class="explanation-list">
+                    <li><strong>Content:</strong> The actual text or elements inside</li>
+                    <li><strong>Padding:</strong> Space between content and border (inside)</li>
+                    <li><strong>Border:</strong> Line around the box</li>
+                    <li><strong>Margin:</strong> Space outside the border (outside)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FLEXBOX SECTION -->
+        <section id="flexbox" class="section">
+            <h2>Flexbox Layout</h2>
+            <p class="section-description">Flexbox enables flexible and responsive layouts. Use justify-content and align-items for alignment.</p>
+            
+            <!-- Horizontal Layout -->
+            <div class="flex-demo">
+                <h3>Horizontal Layout (Row Direction)</h3>
+                <div class="flex-container horizontal">
+                    <div class="flex-item">Item 1</div>
+                    <div class="flex-item">Item 2</div>
+                    <div class="flex-item">Item 3</div>
+                    <div class="flex-item">Item 4</div>
+                </div>
+            </div>
+
+            <!-- Vertical Layout -->
+            <div class="flex-demo">
+                <h3>Vertical Layout (Column Direction)</h3>
+                <div class="flex-container vertical">
+                    <div class="flex-item">Item A</div>
+                    <div class="flex-item">Item B</div>
+                    <div class="flex-item">Item C</div>
+                </div>
+            </div>
+
+            <!-- Centered Content -->
+            <div class="flex-demo">
+                <h3>Centered Content with Flexbox</h3>
+                <div class="flex-container centered">
+                    <div class="flex-item">Centered Item</div>
+                </div>
+            </div>
+
+            <div class="explanation">
+                <h3>Flexbox Properties:</h3>
+                <ul class="explanation-list">
+                    <li><strong>display: flex:</strong> Makes container a flex container</li>
+                    <li><strong>flex-direction:</strong> row (horizontal) or column (vertical)</li>
+                    <li><strong>justify-content:</strong> Aligns items horizontally (flex-start, center, space-between, space-around, flex-end)</li>
+                    <li><strong>align-items:</strong> Aligns items vertically (flex-start, center, flex-end, stretch)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- FORMS SECTION -->
+        <section id="forms" class="section">
+            <h2>Styled Forms</h2>
+            <p class="section-description">Forms are styled using padding, border-radius, background-color, and other CSS properties.</p>
+            
+            <div class="form-container">
+                <form class="styled-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Select Course</label>
+                        <select id="course" name="course" required>
+                            <option value="">Choose a course</option>
+                            <option value="web-dev">Web Development</option>
+                            <option value="css-basics">CSS Basics</option>
+                            <option value="js">JavaScript</option>
+                            <option value="react">React</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Enter your message here" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" name="terms"> I agree to the terms and conditions
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                    <button type="reset" class="btn btn-secondary">Clear Form</button>
+                </form>
+            </div>
+
+            <div class="explanation">
+                <h3>Form Styling Properties:</h3>
+                <ul class="explanation-list">
+                    <li><strong>padding:</strong> Space inside input fields</li>
+                    <li><strong>border:</strong> Input field borders</li>
+                    <li><strong>border-radius:</strong> Rounded corners on buttons and inputs</li>
+                    <li><strong>background-color:</strong> Button and input background colors</li>
+                    <li><strong>font-size:</strong> Text size in form elements</li>
+                    <li><strong>color:</strong> Text color in form elements</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PAGE SECTIONS -->
+        <section id="sections" class="section">
+            <h2>Page Layout Sections</h2>
+            <p class="section-description">Well-structured pages use semantic sections (header, main, footer) with Flexbox for layout.</p>
+            
+            <div class="layout-demo">
+                <div class="demo-header">
+                    <h3>Header Section</h3>
+                    <p>Contains site title and navigation</p>
+                </div>
+                
+                <div class="demo-main">
+                    <div class="demo-sidebar">
+                        <h4>Sidebar</h4>
+                        <p>Additional information</p>
+                    </div>
+                    <div class="demo-content">
+                        <h4>Main Content</h4>
+                        <p>Primary content goes here with all the important information.</p>
+                    </div>
+                </div>
+                
+                <div class="demo-footer">
+                    <h3>Footer Section</h3>
+                    <p>Copyright and additional links</p>
+                </div>
+            </div>
+
+            <div class="explanation">
+                <h3>Layout Best Practices:</h3>
+                <ul class="explanation-list">
+                    <li><strong>Semantic HTML:</strong> Use header, main, footer, section tags</li>
+                    <li><strong>Flexbox Container:</strong> Use display: flex for layout control</li>
+                    <li><strong>Consistent Spacing:</strong> Use margin and padding uniformly</li>
+                    <li><strong>Visual Hierarchy:</strong> Use different font sizes and colors</li>
+                    <li><strong>Responsive Design:</strong> Layouts adapt to different screen sizes</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 CSS Basics Lab - Learning Styling and Layout</p>
+            <ul class="footer-links">
+                <li><a href="#top">Back to Top</a></li>
+                <li><a href="#box-model">Box Model</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
